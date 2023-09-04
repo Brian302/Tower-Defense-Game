@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="900.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.GameController">
+   <children>
+      <SplitPane fx:id="splitPane_1" dividerPositions="0.75" layoutX="392.0" layoutY="339.0" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="750.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="557.0" minWidth="898.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <SplitPane fx:id="splitPane_2" dividerPositions="0.8" layoutX="473.0" layoutY="159.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="557.0" prefWidth="898.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="555.0" minWidth="713.0" prefHeight="160.0" prefWidth="100.0" styleClass="gamecanvas">
+                           <children>
+                              <Canvas fx:id="gameCanvas" height="512.0" width="640.0" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="37.0" AnchorPane.topAnchor="21.0" />
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="555.0" minWidth="175.0" prefHeight="160.0" prefWidth="100.0" styleClass="gamesidebar">
+                           <children>
+                              <GridPane layoutX="-12.0" layoutY="55.0" AnchorPane.leftAnchor="-0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="82.0" minWidth="10.0" prefWidth="71.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="104.0" minWidth="10.0" prefWidth="104.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label styleClass="gamelabel" text="Money:">
+                                       <GridPane.margin>
+                                          <Insets left="10.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label styleClass="gamelabel" text="Health:" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets left="10.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label styleClass="gamelabel" text="Wave:" GridPane.rowIndex="2">
+                                       <GridPane.margin>
+                                          <Insets left="10.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label fx:id="moneyLabel" styleClass="gamelabel" text="Label" GridPane.columnIndex="1">
+                                       <GridPane.margin>
+                                          <Insets left="34.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label fx:id="healthLabel" styleClass="gamelabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets left="34.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label fx:id="waveLabel" styleClass="gamelabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <GridPane.margin>
+                                          <Insets left="34.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                              <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" stylesheets="@Style.css" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="355.0">
+                                 <children>
+                                    <Button fx:id="gameStartButton" mnemonicParsing="false" prefHeight="145.0" prefWidth="145.0" styleClass="gamebutton" text="Start Round" textAlignment="CENTER" wrapText="true">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="pauseButton" mnemonicParsing="false" onAction="#handlePauseGame" prefWidth="145.0" styleClass="gamebutton" text="Pause Game" />
+                                    <Button mnemonicParsing="false" onAction="#handleQuitGame" prefWidth="145.0" styleClass="gamebutton" text="Quit Game" />
+                                 </children>
+                              </VBox>
+                              <GridPane fx:id="structureButtons" alignment="CENTER" layoutY="195.0" prefHeight="216.0" prefWidth="145.0" AnchorPane.bottomAnchor="214.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="120.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <ToggleButton focusTraversable="false" mnemonicParsing="false" prefHeight="72.0" prefWidth="72.0" styleClass="togglebutton">
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="structures" />
+                                       </toggleGroup>
+                                       <graphic>
+                                          <ImageView fx:id="game_0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../images/Game_UndiscoveredTower.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </ToggleButton>
+                                    <ToggleButton focusTraversable="false" mnemonicParsing="false" prefHeight="72.0" prefWidth="72.0" styleClass="togglebutton" toggleGroup="$structures" GridPane.columnIndex="1">
+                                       <graphic>
+                                          <ImageView fx:id="game_1" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../images/Game_UndiscoveredTower.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </ToggleButton>
+                                    <ToggleButton focusTraversable="false" mnemonicParsing="false" prefHeight="72.0" prefWidth="72.0" styleClass="togglebutton" toggleGroup="$structures" GridPane.rowIndex="1">
+                                       <graphic>
+                                          <ImageView fx:id="game_2" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../images/Game_UndiscoveredTower.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </ToggleButton>
+                                    <ToggleButton focusTraversable="false" mnemonicParsing="false" prefHeight="72.0" prefWidth="72.0" styleClass="togglebutton" toggleGroup="$structures" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <graphic>
+                                          <ImageView fx:id="game_3" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../images/Game_UndiscoveredTower.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </ToggleButton>
+                                    <ToggleButton focusTraversable="false" mnemonicParsing="false" prefHeight="72.0" prefWidth="72.0" styleClass="togglebutton" toggleGroup="$structures" GridPane.rowIndex="2">
+                                       <graphic>
+                                          <ImageView fx:id="game_4" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../images/Game_UndiscoveredTower.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </ToggleButton>
+                                    <ToggleButton focusTraversable="false" mnemonicParsing="false" prefHeight="72.0" prefWidth="72.0" styleClass="togglebutton" toggleGroup="$structures" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <graphic>
+                                          <ImageView fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../images/Game_UndiscoveredTower.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </ToggleButton>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane fx:id="textPane" minHeight="183.0" minWidth="898.0" styleClass="gamebottombar" />
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

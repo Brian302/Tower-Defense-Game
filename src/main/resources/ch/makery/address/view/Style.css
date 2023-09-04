@@ -1,0 +1,87 @@
+.button:hover, .historybutton:hover {
+    -fx-background-color: #999999;
+    -fx-text-fill: #222222;
+}
+
+.togglebutton:hover {
+    -fx-background-color: #bbbbbb;
+}
+
+.mainmenubutton {
+    -fx-font-family: "Comic Sans MS", Times, serif;
+    -fx-font-size: 30pt;
+}
+
+.historybutton {
+    -fx-font-family: "Comic Sans MS", Times, serif;
+    -fx-font-size: 12pt;
+}
+
+.gamebutton {
+    -fx-font-family: "Comic Sans MS", Times, serif;
+    -fx-font-size: 16pt;
+    -fx-padding: 2 2 2 2;
+}
+
+.guidebackground, .historybackground {
+    -fx-background-color: #071952;
+}
+
+.guidebiglabel {
+    -fx-font-family: "Comic Sans MS", Times, serif;
+    -fx-text-fill: #9BE8D8;
+    -fx-font-size: 24pt;
+    -fx-font-weight: bold
+}
+
+.guidesmalllabel {
+    -fx-font-family: "Comic Sans MS", Times, serif;
+    -fx-text-fill: #97FEED;
+    -fx-font-size: 12pt;
+}
+
+.historybiglabel {
+    -fx-font-family: "Comic Sans MS", Times, serif;
+    -fx-text-fill: #8CC0DE;
+    -fx-font-size: 30pt;
+    -fx-font-weight: bold
+}
+
+.table-view {
+    -fx-base: #0B666A;
+    -fx-control-inner-background: #0B666A;
+    -fx-background-color: #0B666A;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 16pt;
+    -fx-font-family: "Comic Sans MS", Times, serif;
+    -fx-text-fill: #9BE8D8;
+    -fx-alignment: center;
+    -fx-opacity: 1;
+}
+
+.gamecanvas {
+    -fx-background-color: #8CC0DE
+}
+
+.gamesidebar {
+    -fx-background-color: #FFB07F
+}
+
+.gamebottombar {
+    -fx-background-color: #FFECAF
+}
+
+.gamelabel {
+    -fx-font-family: "Comic Sans MS", Times, serif;
+    -fx-text-fill: #000000;
+    -fx-font-size: 13pt;
+}
+
+.split-pane:horizontal > .split-pane-divider, .split-pane:vertical > .split-pane-divider {
+    -fx-border-color: transparent #0B666A transparent #0B666A;
+    -fx-background-color: transparent, derive(#0B666A,20%);
+}

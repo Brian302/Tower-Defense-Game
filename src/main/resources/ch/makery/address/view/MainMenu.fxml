@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="900.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.MainMenuController">
+   <children>
+      <StackPane prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="750.0" fitWidth="900.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../../images/MainMenu.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" rotate="10.0" scaleX="4.0" scaleY="4.0" scaleZ="4.0" translateX="100.0" translateY="-240.0">
+               <image>
+                  <Image url="@../../../../images/MainMenuTitle.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0" scaleZ="2.0" translateX="-200.0" translateY="100.0">
+               <image>
+                  <Image url="@../../../../images/MainMenuTower.png" />
+               </image>
+            </ImageView>
+         </children>
+      </StackPane>
+      <VBox spacing="30.0" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="50.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleStartGame" prefWidth="278.0" styleClass="mainmenubutton" text="Play Game">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#showHistory" prefWidth="278.0" styleClass="mainmenubutton" text="History">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handleQuit" prefWidth="278.0" styleClass="mainmenubutton" text="Quit">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <VBox layoutX="-3.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0">
+         <children>
+            <Slider fx:id="mainMenuAudioSlider" max="1.0" orientation="VERTICAL" value="0.5">
+               <VBox.margin>
+                  <Insets left="15.0" />
+               </VBox.margin>
+            </Slider>
+            <ImageView fx:id="mainMenuAudio" fitHeight="64.0" fitWidth="64.0" onMouseClicked="#handleAudio" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/MainMenuAudio_Medium.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <Button mnemonicParsing="false" onAction="#showGuide" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="27.0">
+         <graphic>
+            <ImageView fx:id="handleBackMenu" fitHeight="93.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/Guide.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

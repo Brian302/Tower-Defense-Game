@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="guidebackground" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.GuideController">
+   <children>
+      <Label layoutX="254.0" layoutY="14.0" styleClass="guidebiglabel" text="Guide">
+         <font>
+            <Font name="Segoe Print" size="32.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="51.0" fitWidth="87.0" layoutX="17.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/balloons/Game_RedBalloon_0_0.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="78.0" layoutY="76.0" styleClass="guidesmalllabel" text="Red balloons take 1 hit. Normal speed." AnchorPane.leftAnchor="78.0" />
+      <ImageView fitHeight="51.0" fitWidth="87.0" layoutX="17.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/balloons/Game_BlueBalloon_0_0.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="80.0" layoutY="127.0" styleClass="guidesmalllabel" text="Blue balloons take 2 hits. Normal speed." AnchorPane.leftAnchor="78.0" />
+      <ImageView fitHeight="51.0" fitWidth="87.0" layoutX="17.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/balloons/Game_GreenBalloon_0_0.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="78.0" layoutY="178.0" styleClass="guidesmalllabel" text="Green balloons take 3 hits. Normal speed." AnchorPane.leftAnchor="78.0" />
+      <ImageView fitHeight="51.0" fitWidth="87.0" layoutX="17.0" layoutY="214.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/balloons/Game_YellowBalloon_0_0.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="78.0" layoutY="229.0" styleClass="guidesmalllabel" text="Yellow balloons take 2 hits. Faster speed." AnchorPane.leftAnchor="78.0" />
+      <ImageView fitHeight="51.0" fitWidth="87.0" layoutX="17.0" layoutY="265.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/balloons/Game_PurpleBalloon_0_0.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="78.0" layoutY="280.0" styleClass="guidesmalllabel" text="Purple balloons take 3 hits. Faster speed." AnchorPane.leftAnchor="78.0" />
+      <ImageView fitHeight="57.0" fitWidth="70.0" layoutX="14.0" layoutY="316.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/Guide_Money.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="78.0" layoutY="334.0" styleClass="guidesmalllabel" text="Earn money by popping balloons and clearing waves." AnchorPane.leftAnchor="78.0" />
+      <Button layoutX="492.0" layoutY="27.0" mnemonicParsing="false" onAction="#handleBackMenu" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="27.0">
+         <graphic>
+            <ImageView fitHeight="93.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/Guide_Back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
